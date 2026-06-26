@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://cqyk3t0f3gsdp"]
+
+[ext_resource type="Texture2D" uid="uid://d0ha5nf5n23mp" path="res://icon.svg" id="1_tex"]
+
+[sub_resource type="RectangleShape2D" id="Rect_floor_xl"]
+size = Vector2(2400, 80)
+
+[sub_resource type="RectangleShape2D" id="Rect_ramp"]
+size = Vector2(560, 56)
+
+[sub_resource type="RectangleShape2D" id="Rect_floor_lg"]
+size = Vector2(1600, 80)
+
+[sub_resource type="RectangleShape2D" id="Rect_hop"]
+size = Vector2(72, 52)
+
+[sub_resource type="RectangleShape2D" id="Rect_floor_md"]
+size = Vector2(1200, 80)
+
+[sub_resource type="RectangleShape2D" id="Rect_floor_sm"]
+size = Vector2(640, 80)
+
+[sub_resource type="RectangleShape2D" id="Rect_stand_step"]
+size = Vector2(320, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfd2h"]
+size = Vector2(640, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwdyu"]
+size = Vector2(517.36035, 56)
+
+[sub_resource type="RectangleShape2D" id="Rect_wall"]
+size = Vector2(64, 720)
+
+[node name="level1" type="StaticBody2D" unique_id=1953320858]
+
+[node name="BackdropA" type="Sprite2D" parent="." unique_id=466257093]
+modulate = Color(0.55, 0.62, 0.82, 0.28)
+position = Vector2(2000, 260)
+scale = Vector2(28, 8)
+texture = ExtResource("1_tex")
+
+[node name="BackdropB" type="Sprite2D" parent="." unique_id=1448903145]
+modulate = Color(0.5, 0.58, 0.78, 0.22)
+position = Vector2(5200, 240)
+scale = Vector2(26, 7)
+texture = ExtResource("1_tex")
+
+[node name="BackdropC" type="Sprite2D" parent="." unique_id=693928063]
+modulate = Color(0.52, 0.6, 0.8, 0.24)
+position = Vector2(7600, 250)
+scale = Vector2(22, 7)
+texture = ExtResource("1_tex")
+
+[node name="StartFloorSprite" type="Sprite2D" parent="." unique_id=1353246179]
+modulate = Color(0.84, 0.9, 1, 1)
+position = Vector2(1200, 420)
+scale = Vector2(18.75, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="StartFloorCol" type="CollisionShape2D" parent="." unique_id=2080238847]
+position = Vector2(1200, 420)
+shape = SubResource("Rect_floor_xl")
+
+[node name="RampUpSprite" type="Sprite2D" parent="." unique_id=317148148]
+modulate = Color(0.86, 0.92, 1, 1)
+position = Vector2(2620, 368)
+rotation = -0.3
+scale = Vector2(4.375, 0.4375)
+texture = ExtResource("1_tex")
+
+[node name="RampUpCol" type="CollisionShape2D" parent="." unique_id=1574366045]
+position = Vector2(2620, 368)
+rotation = -0.3
+shape = SubResource("Rect_ramp")
+
+[node name="HighwaySprite" type="Sprite2D" parent="." unique_id=1191027091]
+modulate = Color(1, 0.9, 0.78, 1)
+position = Vector2(4200, 300)
+scale = Vector2(12.5, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="HighwayCol" type="CollisionShape2D" parent="." unique_id=1349055160]
+position = Vector2(4200, 300)
+shape = SubResource("Rect_floor_lg")
+
+[node name="HopBarrier1Sprite" type="Sprite2D" parent="." unique_id=609841849]
+modulate = Color(0.95, 0.72, 0.68, 1)
+position = Vector2(3600, 314)
+scale = Vector2(0.5625, 0.40625)
+texture = ExtResource("1_tex")
+
+[node name="HopBarrier1Col" type="CollisionShape2D" parent="." unique_id=609190761]
+position = Vector2(3600, 314)
+shape = SubResource("Rect_hop")
+
+[node name="HopBarrier2Sprite" type="Sprite2D" parent="." unique_id=873252536]
+modulate = Color(0.95, 0.72, 0.68, 1)
+position = Vector2(4200, 314)
+scale = Vector2(0.5625, 0.40625)
+texture = ExtResource("1_tex")
+
+[node name="HopBarrier2Col" type="CollisionShape2D" parent="." unique_id=1384884384]
+position = Vector2(4200, 314)
+shape = SubResource("Rect_hop")
+
+[node name="HopBarrier3Sprite" type="Sprite2D" parent="." unique_id=631406446]
+modulate = Color(0.95, 0.72, 0.68, 1)
+position = Vector2(4780, 314)
+scale = Vector2(0.5625, 0.40625)
+texture = ExtResource("1_tex")
+
+[node name="HopBarrier3Col" type="CollisionShape2D" parent="." unique_id=556096944]
+position = Vector2(4780, 314)
+shape = SubResource("Rect_hop")
+
+[node name="RampDownSprite" type="Sprite2D" parent="." unique_id=81655981]
+modulate = Color(0.86, 0.92, 1, 1)
+position = Vector2(5220, 360)
+rotation = 0.32
+scale = Vector2(4.375, 0.4375)
+texture = ExtResource("1_tex")
+
+[node name="RampDownCol" type="CollisionShape2D" parent="." unique_id=630142989]
+position = Vector2(5220, 360)
+rotation = 0.32
+shape = SubResource("Rect_ramp")
+
+[node name="ValleyFloorSprite" type="Sprite2D" parent="." unique_id=203210935]
+modulate = Color(0.82, 0.88, 1, 1)
+position = Vector2(5680, 420)
+scale = Vector2(8.75, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="ValleyFloorCol" type="CollisionShape2D" parent="." unique_id=1370822995]
+position = Vector2(5680, 420)
+shape = SubResource("Rect_floor_md")
+
+[node name="SpeedGapLandingSprite" type="Sprite2D" parent="." unique_id=193251035]
+modulate = Color(0.82, 0.88, 1, 1)
+position = Vector2(6680, 420)
+scale = Vector2(5, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="SpeedGapLandingCol" type="CollisionShape2D" parent="." unique_id=1161084040]
+position = Vector2(6680, 420)
+shape = SubResource("Rect_floor_sm")
+
+[node name="StandStepSprite" type="Sprite2D" parent="." unique_id=1213690319]
+modulate = Color(0.78, 0.95, 0.84, 1)
+position = Vector2(7100, 308)
+scale = Vector2(2.5, 0.375)
+texture = ExtResource("1_tex")
+
+[node name="StandStepCol" type="CollisionShape2D" parent="." unique_id=452795213]
+position = Vector2(7100, 308)
+shape = SubResource("Rect_stand_step")
+
+[node name="StandStepFloorSprite" type="Sprite2D" parent="." unique_id=2120485802]
+modulate = Color(0.78, 0.94, 0.84, 1)
+position = Vector2(7480, 308)
+scale = Vector2(5, 0.375)
+texture = ExtResource("1_tex")
+
+[node name="StandStepFloorCol" type="CollisionShape2D" parent="." unique_id=1768395004]
+position = Vector2(7480, 307)
+shape = SubResource("RectangleShape2D_lfd2h")
+
+[node name="StepDownRampSprite" type="Sprite2D" parent="." unique_id=1644033144]
+modulate = Color(0.86, 0.92, 1, 1)
+position = Vector2(7820, 348)
+rotation = 0.28
+scale = Vector2(3.75, 0.4375)
+texture = ExtResource("1_tex")
+
+[node name="StepDownRampCol" type="CollisionShape2D" parent="." unique_id=715979775]
+position = Vector2(7840.4897, 353.89185)
+rotation = 0.28
+shape = SubResource("RectangleShape2D_wwdyu")
+
+[node name="FinalRunSprite" type="Sprite2D" parent="." unique_id=1848438069]
+modulate = Color(1, 0.9, 0.78, 1)
+position = Vector2(8600, 420)
+scale = Vector2(12.5, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="FinalRunCol" type="CollisionShape2D" parent="." unique_id=1002875236]
+position = Vector2(8600, 420)
+shape = SubResource("Rect_floor_lg")
+
+[node name="HopBarrier4Sprite" type="Sprite2D" parent="." unique_id=1822680603]
+modulate = Color(0.95, 0.72, 0.68, 1)
+position = Vector2(8200, 354)
+scale = Vector2(0.5625, 0.40625)
+texture = ExtResource("1_tex")
+
+[node name="HopBarrier4Col" type="CollisionShape2D" parent="." unique_id=1601022448]
+position = Vector2(8200, 354)
+shape = SubResource("Rect_hop")
+
+[node name="HopBarrier5Sprite" type="Sprite2D" parent="." unique_id=1708620322]
+modulate = Color(0.95, 0.72, 0.68, 1)
+position = Vector2(9000, 354)
+scale = Vector2(0.5625, 0.40625)
+texture = ExtResource("1_tex")
+
+[node name="HopBarrier5Col" type="CollisionShape2D" parent="." unique_id=936156961]
+position = Vector2(9000, 354)
+shape = SubResource("Rect_hop")
+
+[node name="FinishSprite" type="Sprite2D" parent="." unique_id=1551689799]
+modulate = Color(0.84, 0.96, 0.88, 1)
+position = Vector2(9400, 420)
+scale = Vector2(6.875, 0.625)
+texture = ExtResource("1_tex")
+
+[node name="FinishCol" type="CollisionShape2D" parent="." unique_id=1080440078]
+position = Vector2(9400, 420)
+shape = SubResource("Rect_floor_sm")
+
+[node name="LeftWallSprite" type="Sprite2D" parent="." unique_id=1102734135]
+modulate = Color(0.7, 0.76, 0.92, 1)
+position = Vector2(-32, 300)
+scale = Vector2(0.5, 5.625)
+texture = ExtResource("1_tex")
+
+[node name="LeftWallCol" type="CollisionShape2D" parent="." unique_id=24883316]
+position = Vector2(-32, 300)
+shape = SubResource("Rect_wall")
+
+[node name="RightWallSprite" type="Sprite2D" parent="." unique_id=1651271808]
+modulate = Color(0.7, 0.76, 0.92, 1)
+position = Vector2(9800, 300)
+scale = Vector2(0.5, 5.625)
+texture = ExtResource("1_tex")
+
+[node name="RightWallCol" type="CollisionShape2D" parent="." unique_id=833462913]
+position = Vector2(9800, 300)
+shape = SubResource("Rect_wall")

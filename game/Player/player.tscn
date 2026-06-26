@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://boy36h5ck3842"]
+
+[ext_resource type="Script" uid="uid://xq4h34io4dpo" path="res://game/Player/player.gd" id="1_player"]
+[ext_resource type="Script" uid="uid://21viacf0jmkl" path="res://game/Player/camera_follow.gd" id="2_camera"]
+[ext_resource type="Texture2D" uid="uid://cuk35tkn4xr78" path="res://game/Player/handstand_idle.png" id="3_pqjn1"]
+[ext_resource type="Texture2D" uid="uid://5jhnwoxugwuv" path="res://game/Player/standing_idle_armless.png" id="4_0qtag"]
+[ext_resource type="Texture2D" uid="uid://cxot8tp3he1fr" path="res://game/Player/standing_jumping_idle.png" id="5_dhuxm"]
+[ext_resource type="Texture2D" uid="uid://bpvux6qyrrwky" path="res://game/Player/standing_walking_armless.png" id="5_uxmbx"]
+[ext_resource type="Texture2D" uid="uid://dtlkhl64oblv7" path="res://game/Player/standing_moving_falling.png" id="6_fall"]
+[ext_resource type="Texture2D" uid="uid://b6rullg4rnb6m" path="res://game/Player/standing_jumping_moving.png" id="7_2vk5q"]
+[ext_resource type="Texture2D" uid="uid://eo12hpa87yyy" path="res://game/Player/standing_idle_falling.png" id="8_idlfall"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqjn1"]
+size = Vector2(72.26983, 228.91345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqjn1"]
+atlas = ExtResource("3_pqjn1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qtag"]
+atlas = ExtResource("3_pqjn1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxmbx"]
+atlas = ExtResource("4_0qtag")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhuxm"]
+atlas = ExtResource("4_0qtag")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grc3x"]
+atlas = ExtResource("5_dhuxm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fall"]
+atlas = ExtResource("6_fall")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyide"]
+atlas = ExtResource("7_2vk5q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idlfall"]
+atlas = ExtResource("8_idlfall")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vk5q"]
+atlas = ExtResource("5_uxmbx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7f37"]
+atlas = ExtResource("5_uxmbx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3k5l"]
+atlas = ExtResource("5_uxmbx")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4en7"]
+atlas = ExtResource("5_uxmbx")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0qtag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqjn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qtag")
+}],
+"loop": true,
+"name": &"handstand_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxmbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhuxm")
+}],
+"loop": true,
+"name": &"standing_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grc3x")
+}],
+"loop": true,
+"name": &"standing_idle_jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idlfall")
+}],
+"loop": true,
+"name": &"standing_idle_falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fall")
+}],
+"loop": true,
+"name": &"standing_moving_falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyide")
+}],
+"loop": true,
+"name": &"standing_moving_jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vk5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7f37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3k5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4en7")
+}],
+"loop": true,
+"name": &"standing_walking",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1292570386]
+script = ExtResource("1_player")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1209883004]
+position = Vector2(-1.9999986, 4)
+scale = Vector2(0.6641776, 0.46305713)
+shape = SubResource("RectangleShape2D_pqjn1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=838540978]
+top_level = true
+script = ExtResource("2_camera")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=262990446]
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer" unique_id=962964793]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_font_sizes/normal_font_size = 30
+text = "hey"
+
+[node name="Skin" type="Node2D" parent="." unique_id=112725485]
+position = Vector2(-2, 0)
+scale = Vector2(4, 4)
+
+[node name="WalkArmConnects" type="Node2D" parent="Skin" unique_id=794832294]
+
+[node name="LeftArmConnect" type="Line2D" parent="Skin/WalkArmConnects" unique_id=1910820564]
+
+[node name="RightArmConnect" type="Line2D" parent="Skin/WalkArmConnects" unique_id=173928076]
+
+[node name="Body" type="AnimatedSprite2D" parent="Skin" unique_id=112725486]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_0qtag")
+animation = &"standing_idle"
+
+[node name="WalkLegs" type="Node2D" parent="Skin" unique_id=794832292]
+z_index = 1
+
+[node name="LeftLeg" type="Line2D" parent="Skin/WalkLegs" unique_id=1910820561]
+
+[node name="RightLeg" type="Line2D" parent="Skin/WalkLegs" unique_id=173928073]
+
+[node name="LeftShoe" type="Node2D" parent="Skin/WalkLegs"]
+
+[node name="RightShoe" type="Node2D" parent="Skin/WalkLegs"]
+
+[node name="WalkArms" type="Node2D" parent="Skin" unique_id=794832293]
+z_index = 2
+
+[node name="LeftArm" type="Line2D" parent="Skin/WalkArms" unique_id=1910820562]
+
+[node name="RightArm" type="Line2D" parent="Skin/WalkArms" unique_id=173928074]
+
+[node name="LeftFist" type="Node2D" parent="Skin/WalkArms" unique_id=1910820563]
+
+[node name="RightFist" type="Node2D" parent="Skin/WalkArms" unique_id=173928075]
