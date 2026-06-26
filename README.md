@@ -50,8 +50,6 @@ addons/       Editor plugins (e.g. Wakatime)
 
 Most movement and limb values live in `game/Player/player.gd`. Shoe colors are `@export` vars on the Player — editable in the inspector.
 
-To disable shoes: set `SHOES_ENABLED := false` in `player.gd`.
-
 ## License
 
 See [LICENSE](LICENSE).
