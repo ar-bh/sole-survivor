@@ -18,7 +18,7 @@ Play as a stick-figure character with procedural limbs, standing/handstand movem
 2. Open the project in Godot (`project.godot`).
 3. Press **F5** or click **Run Project**.
 
-Main scene: `game/main.tscn` · First level: `game/map/level1.tscn`
+Main scene: `game/main.tscn` · Level select UI: `game/level_select/` · Maps: `game/level_select/maps/`
 
 ## Controls
 
@@ -40,15 +40,15 @@ Main scene: `game/main.tscn` · First level: `game/map/level1.tscn`
 
 ```
 game/
-  Player/     Player scene, sprites, player.gd
-  map/        Levels (level1.tscn)
-  main.tscn   Entry point
-addons/       Editor plugins (e.g. Wakatime)
+  Player/           Player scene, sprites, player.gd
+  level_select/   Level select UI, maps, font assets
+  main.tscn       Entry point (level select + gameplay)
+addons/             Editor plugins (e.g. Wakatime)
 ```
 
 ## Player tuning
 
-Most movement and limb values live in `game/Player/player.gd`. Shoe colors are `@export` vars on the Player — editable in the inspector.
+Most movement values live in `game/Player/player.gd`. Limb and shoe tuning lives in `game/Player/player_limbs.gd` — shoe colors are `@export` vars on the **Limbs** node.
 
 ## License
 
